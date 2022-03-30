@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <TabPane fx:id="monPane" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Accueil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="38.0" layoutY="71.0" prefHeight="68.0" prefWidth="525.0" text="CONVERTISSEUR D'UNITE">
+                           <font>
+                              <Font name="Berlin Sans FB" size="46.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnVolume" layoutX="14.0" layoutY="164.0" mnemonicParsing="false" onAction="#changer" prefHeight="90.0" prefWidth="179.0" text="Volume">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font></Button>
+                        <Button fx:id="btnMasse" layoutX="209.0" layoutY="164.0" mnemonicParsing="false" onAction="#changer" prefHeight="90.0" prefWidth="179.0" text="Masse">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font></Button>
+                        <Button fx:id="btnLongeur" layoutX="408.0" layoutY="165.0" mnemonicParsing="false" onAction="#changer" prefHeight="89.0" prefWidth="178.0" text="Longeur">
+                           <font>
+                              <Font name="Berlin Sans FB" size="30.0" />
+                           </font></Button>
+                        <Button fx:id="btnQuitter" layoutX="492.0" layoutY="313.0" mnemonicParsing="false" onAction="#quitter" prefHeight="34.0" prefWidth="94.0" text="Quitter">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Volume">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="vtxt2" layoutX="345.0" layoutY="147.0" onKeyReleased="#convert2" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <TextField fx:id="vtxt1" layoutX="46.0" layoutY="147.0" onKeyReleased="#convert1" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <ComboBox fx:id="vcbo2" layoutX="345.0" layoutY="212.0" onAction="#convert2" prefHeight="31.0" prefWidth="206.0" />
+                        <ComboBox fx:id="vcbo1" layoutX="46.0" layoutY="212.0" onAction="#convert1" prefHeight="31.0" prefWidth="206.0" />
+                        <Label layoutX="206.0" layoutY="57.0" prefHeight="68.0" prefWidth="190.0" text="VOLUME" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="48.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnQuitterV" layoutX="492.0" layoutY="313.0" mnemonicParsing="false" onAction="#quitter" prefHeight="34.0" prefWidth="94.0" text="Quitter">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnHomeV" layoutX="387.0" layoutY="313.0" mnemonicParsing="false" onAction="#home" prefHeight="34.0" prefWidth="94.0" text="Acceuil">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Masse">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="mtxt2" layoutX="345.0" layoutY="147.0" onKeyReleased="#mconvert2" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <TextField fx:id="mtxt1" layoutX="46.0" layoutY="147.0" onKeyReleased="#mconvert1" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <ComboBox fx:id="mcbo2" layoutX="345.0" layoutY="212.0" onAction="#mconvert2" prefHeight="31.0" prefWidth="206.0" />
+                        <ComboBox fx:id="mcbo1" layoutX="46.0" layoutY="212.0" onAction="#mconvert1" prefHeight="31.0" prefWidth="206.0" />
+                        <Label layoutX="229.0" layoutY="58.0" prefHeight="68.0" prefWidth="144.0" text="MASSE" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="48.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnQuitterM" layoutX="492.0" layoutY="313.0" mnemonicParsing="false" onAction="#quitter" prefHeight="34.0" prefWidth="94.0" text="Quitter">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnHomeM" layoutX="387.0" layoutY="313.0" mnemonicParsing="false" onAction="#home" prefHeight="34.0" prefWidth="94.0" text="Acceuil">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Longeur">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="ltxt2" layoutX="345.0" layoutY="147.0" onKeyReleased="#lconvert2" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <TextField fx:id="ltxt1" layoutX="46.0" layoutY="147.0" onKeyReleased="#lconvert1" onKeyTyped="#verifNum" prefHeight="50.0" prefWidth="206.0" />
+                        <ComboBox fx:id="lcbo2" layoutX="345.0" layoutY="212.0" onAction="#lconvert2" prefHeight="31.0" prefWidth="206.0" />
+                        <ComboBox fx:id="lcbo1" layoutX="46.0" layoutY="212.0" onAction="#lconvert1" prefHeight="31.0" prefWidth="206.0" />
+                        <Label layoutX="193.0" layoutY="60.0" prefHeight="68.0" prefWidth="214.0" text="LONGEUR" textAlignment="CENTER">
+                           <font>
+                              <Font name="Berlin Sans FB" size="48.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnQuitterL" layoutX="492.0" layoutY="313.0" mnemonicParsing="false" onAction="#quitter" prefHeight="34.0" prefWidth="94.0" text="Quitter">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnHomeL" layoutX="387.0" layoutY="313.0" mnemonicParsing="false" onAction="#home" prefHeight="34.0" prefWidth="94.0" text="Acceuil">
+                           <font>
+                              <Font name="Berlin Sans FB" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <effect>
+            <Reflection />
+         </effect>
+      </TabPane>
+   </children>
+</AnchorPane>

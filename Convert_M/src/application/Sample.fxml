@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txt1" layoutX="31.0" layoutY="169.0" onKeyReleased="#convert1" onKeyTyped="#verifNum" />
+            <TextField fx:id="txt2" layoutX="280.0" layoutY="169.0" onKeyReleased="#convert2" onKeyTyped="#verifNum" />
+            <ComboBox fx:id="cbo1" layoutX="31.0" layoutY="248.0" onAction="#convert1" prefHeight="31.0" prefWidth="159.0" />
+            <ComboBox fx:id="cbo2" layoutX="309.0" layoutY="248.0" onAction="#convert2" prefHeight="31.0" prefWidth="158.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
